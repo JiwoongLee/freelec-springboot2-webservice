@@ -10,9 +10,9 @@ public class ProfileControllerUnitTest {
     @Test
     public void real_profile_lookup() {
         //given
-        String expectedProfie = "real";
+        String expectedProfile = "real";
         MockEnvironment env = new MockEnvironment();
-        env.addActiveProfile(expectedProfie);
+        env.addActiveProfile(expectedProfile);
         env.addActiveProfile("oauth");
         env.addActiveProfile("real-db");
 
@@ -22,7 +22,7 @@ public class ProfileControllerUnitTest {
         String profile = controller.profile();
 
         //then
-        assertThat(profile).isEqualTo(expectedProfie);
+        assertThat(profile).isEqualTo(expectedProfile);
     }
 
     @Test
