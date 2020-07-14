@@ -3,7 +3,7 @@
 REPOSITORY=/home/ec2-user/app/step2
 PROJECT_NAME=freelec-springboot2-webservice
 
-cd $REPOSITORY/zip/*.jar $REPOSITORY/
+cp $REPOSITORY/zip/*.jar $REPOSITORY/
 
 echo "> confirm the current running application pid"
 
