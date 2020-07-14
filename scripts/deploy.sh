@@ -7,7 +7,7 @@ cd $REPOSITORY/zip/*.jar $REPOSITORY/
 
 echo "> confirm the current running application pid"
 
-CURRENT_PID=$(pgrep -f1 freelec-springboot2-webservice | grep jar | awk '{print $1}')
+CURRENT_PID=$(pgrep -fl freelec-springboot2-webservice | grep jar | awk '{print $1}')
 
 echo "> current running application pid: $CURRENT_PID"
 
