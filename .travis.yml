@@ -37,7 +37,7 @@ deploy:
     key: freelec-springboot2-webservice.zip # transfer after zipped an build file
     bundle_type: zip # zipped extension
     application: freelec-springboot2-webservice # CodeDeploy application registered in the web console
-    deployment-group: freelec-springboot2-webservice-group # CodeDeploy application deploy group registered in the web console
+    deployment_group: freelec-springboot2-webservice-group # CodeDeploy application deploy group registered in the web console
     region: ap-northeast-2
     wait-until-deployed: true
 
