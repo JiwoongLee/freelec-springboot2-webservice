@@ -18,7 +18,7 @@ before_deploy:
   - mkdir -p before-deploy # create directory to include in the zip file
   - cp scripts/*.sh before-deploy/
   - cp appspec.yml before-deploy/
-  - cd build/libs/*.jar before-deploy/
+  - cp build/libs/*.jar before-deploy/
   - cd before-deploy && zip -r before-deploy * # all zipped after move to before-deploy
   - cd ../ && mkdir -p deploy # create directory after move to parent directory
   - mv before-deploy/before-deploy.zip deploy/freelec-springboot2-webservice.zip # move zip file to deploy
