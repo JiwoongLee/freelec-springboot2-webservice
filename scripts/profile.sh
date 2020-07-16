@@ -1,16 +1,15 @@
 #!/usr/bin/env bash
 
-# find a rest profie: rest1이 사용 중이면 real2가 쉬고 있고, 반대면 real1이 쉬고 있음.
+# find a rest profile: rest1이 사용 중이면 real2가 쉬고 있고, 반대면 real1이 쉬고 있음.
 
 function find_idle_profile() {
     RESPONSE_CODE=$(curl -s -o /dev/null -w "${http_code}" http://localhost/profile)
 
     if [ ${RESPONSE_CODE} -ge 400 ] # more then 400
-
     then
       CURRENT_PROFILE=real2
     else
-      CURRENT_PROFILE=$(curl -s http://localhost/profie)
+      CURRENT_PROFILE=$(curl -s http://localhost/profile)
     fi
 
     if [ ${CURRENT_PROFILE} == real1 ]
