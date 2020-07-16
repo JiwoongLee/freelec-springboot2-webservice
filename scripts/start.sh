@@ -4,7 +4,7 @@ ABSPATH=$(readlink -f $0)
 ABSDIR=$(dirname $ABSPATH)
 source ${ABSPATH}/profile.sh
 
-REPOSITORY=/home/ec2-usr/app/step3
+REPOSITORY=/home/ec2-user/app/step3
 PROJECT_NAME=freelec-springboot2-webservice
 
 echo "> Copy the Build files"
